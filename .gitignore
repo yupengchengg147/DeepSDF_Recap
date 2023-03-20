@@ -1,1 +1,5 @@
 *.zip
+data/sdf_sofas/*
+*.obj
+*.npz
+__pycache__

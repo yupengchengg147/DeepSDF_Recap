@@ -25,7 +25,7 @@ class DeepSDFDecoder(nn.Module):
         self.fc = nn.Linear(512,1)
 
         self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(0.2)
+        self.dropout = nn.Dropout(dropout_prob)
         
 
     def forward(self, x_in):

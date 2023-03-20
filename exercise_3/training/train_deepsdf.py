@@ -64,7 +64,7 @@ def train(model, latent_vectors, train_dataloader, device, config):
             # TODO: perform forward pass
             points.requires_grad = False
             sdf.requires_grad = False
-            input_ = torch.cat([batch_latent_vectors,points],dim=1)
+            input_ = torch.cat([batch_latent_vectors,points],dim=1) #[N*  dim(latent_vectors) + 3]
 
             predicted_sdf = model(input_)
             # TODO: truncate predicted sdf between -0.1 and 0.1
